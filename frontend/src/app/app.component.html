@@ -1,0 +1,40 @@
+
+<mat-toolbar color="primary">
+  <button mat-button [matMenuTriggerFor]="aboveMenu">Pronóstico</button>
+  <mat-menu #aboveMenu="matMenu" yPosition="above">
+    <button mat-button color="primary" routerLink="/promedio_movil">
+      Promedio móvil
+    </button>
+    <button mat-button color="primary" routerLink="/suavizamiento">
+      Suavizamiento de datos
+    </button>
+    <button mat-button color="primary" routerLink="/regre_lineal">
+      Regresion lineal
+    </button>
+    <button mat-button color="primary" routerLink="/regre_cuadratica">
+      Regresion cuadrática
+    </button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="belowMenu">Simulación</button>
+  <mat-menu #belowMenu="matMenu" yPosition="below">
+    <button mat-button color="primary" routerLink="/montecarlo">
+      Simulación de Montecarlo
+    </button>
+    <button mat-button color="primary" routerLink="/tema6">
+      Simulación de inventario
+    </button>
+    <button mat-button color="primary" routerLink="/tema7">
+      Simulación de colas
+    </button>
+  </mat-menu>
+  <div class="spacer">
+      
+  </div>
+  <button mat-button routerLink="/">
+    <h2>Modelamiento y simulación</h2>
+  </button>
+</mat-toolbar>
+<div class="contenido">
+      <router-outlet></router-outlet>
+    </div>
